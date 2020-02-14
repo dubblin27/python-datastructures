@@ -14,7 +14,7 @@ int main(){
 //
 //   getline(cin,x);
 //   cout << x ;
-  int a = 123456789;
+  int128_t a = 123456789;
   ll b = (ll)a*a;
   cout << b << "\n";
 }
