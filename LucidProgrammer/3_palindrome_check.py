@@ -1,23 +1,23 @@
-def check_palindrome(string) :
-    n = 0
-    l = len(string)
-    if len(string)%2 == 0 :
-        n = len(string)/2
-        m1 = string[int(n) : int(l-1)]
-        m2 = string[0:n]
+def check_palindrome(string):
+    n = len(string)
+    n1 = n//2 
+    n2 = (n+1)//2
+    if n%2 == 1:
+        m1 = string[0: n1]
+        m2 = string[n1+1 : n]
+        # print(m1,m2[::-1])
         if m1 == m2[::-1]:
-            return True
-        else:
-            return False
+            print("True")
+        else : 
+            print("False")
     else:
-        n = (len(string) + 1)/2
-        m1 = string[int(n+1) : int(l-1)]
-        m2 = string[0:n]
+        m1 = string[0: n1]
+        m2 = string[n1 : n]
+        # print(m1,m2[::-1])
         if m1 == m2[::-1]:
-            return True
-        else:
-            return False
-
-
+            print("True")
+        else : 
+            print("False")
 string = input()
-print(check_palindrome(string))
+string = string.replace(" ", "")
+check_palindrome(string)
